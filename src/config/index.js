@@ -1,4 +1,4 @@
 export const Routes = {
   HOME: 'HomeScreen',
-  DETAILT: 'DetailScreen',
+  DETAILS: 'DetailScreen',
 };

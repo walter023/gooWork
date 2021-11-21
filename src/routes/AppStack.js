@@ -1,5 +1,4 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import React from 'react';
 
 import { HomeScreen, DetailScreen } from 'screens';
@@ -10,21 +9,18 @@ import { appOptions } from './ScreenOptions';
 const AppStack = createNativeStackNavigator();
 
 export const AppNavigator = () => (
-  <AppStack.Navigator initialRoute={Routes.HOME} headerMode="screen">
+  <AppStack.Navigator initialRoute={Routes.HOME}>
     <AppStack.Screen
       component={HomeScreen}
       name={Routes.HOME}
-      options={{
-        ...appOptions,
-        title: 'Home',
-      }}
+      options={{ ...appOptions, title: 'Jobs' }}
     />
     <AppStack.Screen
       component={DetailScreen}
-      name={Routes.DETAILT}
+      name={Routes.DETAILS}
       options={{
         ...appOptions,
-        title: 'Detail',
+        title: 'Job Detail',
       }}
     />
   </AppStack.Navigator>
