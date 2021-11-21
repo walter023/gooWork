@@ -1,4 +1,5 @@
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import React from 'react';
 
 import { HomeScreen, DetailScreen } from 'screens';
@@ -6,7 +7,7 @@ import { Routes } from 'config';
 
 import { appOptions } from './ScreenOptions';
 
-const AppStack = createStackNavigator();
+const AppStack = createNativeStackNavigator();
 
 export const AppNavigator = () => (
   <AppStack.Navigator initialRoute={Routes.HOME} headerMode="screen">
@@ -23,7 +24,7 @@ export const AppNavigator = () => (
       name={Routes.DETAILT}
       options={{
         ...appOptions,
-        title: 'Detailt',
+        title: 'Detail',
       }}
     />
   </AppStack.Navigator>

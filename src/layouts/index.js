@@ -4,6 +4,13 @@ import { ScrollView, StyleSheet, ViewPropTypes } from 'react-native';
 
 import { DefaultContainerStyle } from 'styles';
 
+const styles = StyleSheet.create({
+  container: {
+    ...DefaultContainerStyle,
+  },
+});
+
+
 export const DefaultLayout = ({ children, style }) => (
   <ScrollView style={[styles.container, style]} showsVerticalScrollIndicator={false}>
     {children}
@@ -18,9 +25,3 @@ DefaultLayout.propTypes = {
 DefaultLayout.defaultProps = {
   style: {},
 };
-
-const styles = StyleSheet.create({
-  container: {
-    ...DefaultContainerStyle,
-  },
-});

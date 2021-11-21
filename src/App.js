@@ -1,14 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
+
+import { AppNavigator } from './routes/AppStack';
 
 const App = () => (
   <SafeAreaProvider>
     <NavigationContainer>
-      <View>
-        <Text>Good work</Text>
-      </View>
+      <AppNavigator />
     </NavigationContainer>
   </SafeAreaProvider>
 );
