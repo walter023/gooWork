@@ -1,14 +1,6 @@
 export const Color = {
-  LIGHT: {
-    PRIMARY: '#EB1C24',
-    SECONDARY: '#002F67',
-    BACKGROUND: '#FFFFFF',
-  },
-  DARK: {
-    PRIMARY: '#EB1C24',
-    SECONDARY: '',
-    BACKGROUND: '#2E2E2E',
-  },
+  PRIMARY: '#002F67',
+  BACKGROUND: '#FFFFFF',
   BLACK: '#222222',
   SHADOW: '#E5E5E5',
   LIGHTSHADOW: '#F5F5F5',
