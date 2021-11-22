@@ -2,14 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Animated, Text, TouchableOpacity, Image, View, ViewPropTypes } from 'react-native';
 
-import { Opacity } from 'styles';
+import { Opacity, IconSize } from 'styles';
 import { Routes } from 'config';
 
+import { Icon } from '../Icon';
 import { styles } from './styles';
 
 export const JobCard = ({ job, style, navigation }) => {
+  const { title, createdAt, profession, location, rate } = job;
   const cardScale = new Animated.Value(1);
-  console.log(job);
+
   const navigateTo = route => {
     navigation.navigate(route, { job });
   };
@@ -47,10 +49,10 @@ export const JobCard = ({ job, style, navigation }) => {
           ]}
         >
           <View style={styles.cardHeader}>
-            <Image source={{ uri: 'icon' }} style={styles.image} />
+            <Icon name={profession.name} size="large" />
             <View style={styles.headerTitles}>
               <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">
-                Blue title
+                {title}
               </Text>
               <View style={styles.inline}>
                 <Text style={styles.label}>bold</Text>
