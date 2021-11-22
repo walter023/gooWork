@@ -12,6 +12,7 @@ module.exports = {
           config: './src/config',
           data: './src/data',
           store: './src/store',
+          components: './src/components',
         },
       },
     ],

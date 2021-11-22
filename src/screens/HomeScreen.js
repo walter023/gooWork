@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import { Text } from 'react-native';
 import { useSelector } from 'react-redux';
 
+import { JobList } from 'components';
 import { getJobs, store, getState } from 'store';
-import { DefaultLayout } from 'layouts';
+import { ListLayout } from 'layouts';
 
-export const HomeScreen = () => {
-  const { jobs, loadin, error } = useSelector(getState);
+export const HomeScreen = ({ navigation }) => {
+  const { jobs, loading, error } = useSelector(getState);
 
   useEffect(() => {
     store.dispatch(getJobs());
   }, []);
 
   return (
-    <DefaultLayout>{jobs && jobs.map(item => <Text>{JSON.stringify(item)}</Text>)}</DefaultLayout>
+    <ListLayout>{jobs && !error && <JobList navigation={navigation} data={jobs} />}</ListLayout>
   );
 };
