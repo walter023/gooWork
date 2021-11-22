@@ -6,7 +6,7 @@ export const Color = {
   GREY: '#707070',
   LIGHTGREY: '#CECECE',
   DARKGREY: '#1B1B1B',
-  SKYBLUE: '#007FFF',
+  SKYBLUE: '#2E6AD8',
   AQUA: '#C6FBFF',
   ORANGE: '#EE7723',
 };

@@ -9,7 +9,7 @@ import { Icon } from '../Icon';
 import { styles } from './styles';
 
 export const JobCard = ({ job, style, navigation }) => {
-  const { title, createdAt, profession, location, rate } = job;
+  const { title, employmentType, createdAt, profession, location, rate } = job;
   const cardScale = new Animated.Value(1);
 
   const navigateTo = route => {
@@ -49,14 +49,14 @@ export const JobCard = ({ job, style, navigation }) => {
           ]}
         >
           <View style={styles.cardHeader}>
-            <Icon name={profession.name} size="large" />
-            <View style={styles.headerTitles}>
+            <Icon name={profession.name} size="large" containerStyle={styles.icon} />
+            <View>
               <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">
                 {title}
               </Text>
               <View style={styles.inline}>
-                <Text style={styles.label}>bold</Text>
-                <Text>build point</Text>
+                <Text style={styles.bold}>{employmentType}</Text>
+                <Text>•</Text>
                 <Text style={styles.small}>regular</Text>
               </View>
               <View style={styles.inline}>

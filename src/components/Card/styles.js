@@ -1,35 +1,30 @@
 import { StyleSheet } from 'react-native';
-import {
-  BorderWidth,
-  Color,
-  Padding,
-  Margin,
-} from 'styles';
+import { BorderWidth, Color, Padding, Margin } from 'styles';
 
 export const styles = StyleSheet.create({
   card: {
     backgroundColor: Color.WHITE,
-    paddingVertical: Padding.SMALL,
-    paddingHorizontal: Padding.SMALL,
-    borderWidth: BorderWidth.LARGE,
+    borderBottomWidth: BorderWidth.XSMALL,
     borderColor: Color.LIGHTGREY,
+    padding: Padding.XSMALL,
+  },
+  icon: {
+    marginHorizontal: Margin.SMALL,
+    alignSelf: 'center',
   },
   cardHeader: {
     flexDirection: 'row',
   },
-  image: {
-  },
-  headerTitles: {
-    paddingLeft: Padding.SMALL,
+  bold:{
+
   },
   inline: {
     flexDirection: 'row',
   },
   title: {
-    color: Color.WATERMELON,
-  },
-  icon: {
-    alignSelf: 'center',
+    fontSize: 20,
+    color: Color.SKYBLUE,
+    fontWeight: 'bold',
   },
   label: {
     color: Color.PRIMARY,
