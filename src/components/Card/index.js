@@ -9,7 +9,7 @@ import { styles } from './styles';
 
 export const JobCard = ({ job, style, navigation }) => {
   const cardScale = new Animated.Value(1);
-
+  console.log(job);
   const navigateTo = route => {
     navigation.navigate(route, { job });
   };
