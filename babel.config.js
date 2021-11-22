@@ -10,6 +10,8 @@ module.exports = {
           layouts: './src/layouts',
           screens: './src/screens',
           config: './src/config',
+          data: './src/data',
+          store: './src/store',
         },
       },
     ],

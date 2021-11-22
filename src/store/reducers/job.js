@@ -1,4 +1,6 @@
-import {  createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+
+import { JOBS } from 'data';
 
 const initialState = {
   jobs: [],
@@ -19,7 +21,8 @@ const jobSlice = createSlice({
     },
     getJobs(state) {
       state.loading = true;
-        
+      const jobs = Object.keys(JOBS);
+      console.log(jobs);
       state.loading = false;
     },
   },
