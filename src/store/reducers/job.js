@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createSelector } from '@reduxjs/toolkit';
 
 import { JOBS } from 'data';
 
@@ -21,13 +21,20 @@ const jobSlice = createSlice({
     },
     getJobs(state) {
       state.loading = true;
-      const jobs = Object.keys(JOBS);
-      console.log(jobs);
+      const jobKeys = Object.keys(JOBS);
+      jobKeys.forEach(key => {
+        state.jobs.push(JOBS[key]);
+      });
       state.loading = false;
     },
   },
   extraReducers: {},
 });
+
+export const getState = createSelector(
+  state => state.job,
+  job => job,
+);
 
 export const { setError, cleanState, getJobs } = jobSlice.actions;
 
