@@ -23,7 +23,7 @@ export const BorderWidth = {
 };
 
 export const IconSize = {
-  SMALL: 40,
+  SMALL: 30,
   MEDIUM: 50,
   LARGE: 60,
 };

@@ -6,13 +6,14 @@ module.exports = {
       {
         root: ['.'],
         alias: {
-          styles: './src/styles',
-          layouts: './src/layouts',
-          screens: './src/screens',
+          components: './src/components',
           config: './src/config',
           data: './src/data',
+          helpers: './src/helpers',
+          layouts: './src/layouts',
+          screens: './src/screens',
           store: './src/store',
-          components: './src/components',
+          styles: './src/styles',
         },
       },
     ],

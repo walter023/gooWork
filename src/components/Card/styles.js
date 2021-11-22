@@ -15,21 +15,25 @@ export const styles = StyleSheet.create({
   cardHeader: {
     flexDirection: 'row',
   },
-  bold:{
-
-  },
   inline: {
     flexDirection: 'row',
+  },
+  boldCopy: {
+    fontSize: 16,
+    color: Color.GREY,
+    fontWeight: 'bold',
   },
   title: {
     fontSize: 20,
     color: Color.SKYBLUE,
     fontWeight: 'bold',
   },
-  label: {
-    color: Color.PRIMARY,
+  bodyCopy: {
+    fontSize: 16,
+    color: Color.GREY,
+    fontWeight: '400'
   },
-  small: {
+  bullet: {
     marginBottom: Margin.SMALL,
   },
 });

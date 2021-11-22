@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Animated, Text, TouchableOpacity, Image, View, ViewPropTypes } from 'react-native';
 
-import { Opacity, IconSize } from 'styles';
+import { Opacity } from 'styles';
 import { Routes } from 'config';
+import { toUpper } from '../../helpers';
 
 import { Icon } from '../Icon';
 import { styles } from './styles';
@@ -55,12 +56,14 @@ export const JobCard = ({ job, style, navigation }) => {
                 {title}
               </Text>
               <View style={styles.inline}>
-                <Text style={styles.bold}>{employmentType}</Text>
-                <Text>•</Text>
-                <Text style={styles.small}>regular</Text>
+                <Text style={styles.boldCopy}>{toUpper(employmentType)}</Text>
+                <Text style={styles.boldCopy}> • </Text>
+                <Text style={styles.bodyCopy}>{`${toUpper(location.suburb)} ${toUpper(
+                  location.state,
+                )}`}</Text>
               </View>
               <View style={styles.inline}>
-                <Text style={styles.icon}>icon</Text>
+                <Icon name="Clock" size="small" />
                 <Text style={styles.small}>small body</Text>
               </View>
               <View style={styles.inline}>

@@ -5,6 +5,7 @@ import { IconSize } from 'styles';
 import Tiles from 'src/assets/tiler.svg';
 import Bricklayer from 'src/assets/bricklayer.svg';
 import CabinetMaker from 'src/assets/cabinet-maker.svg';
+import Clock from 'src/assets/clock.svg';
 
 export const SvgIcon = ({ name, size }) => {
   switch (name) {
@@ -14,6 +15,8 @@ export const SvgIcon = ({ name, size }) => {
       return <Bricklayer width={IconSize[size]} height={IconSize[size]} />;
     case 'Cabinet Maker':
       return <CabinetMaker width={IconSize[size]} height={IconSize[size]} />;
+    case 'Clock':
+      return <Clock width={IconSize[size]} height={IconSize[size]} />;
     default:
       break;
   }
