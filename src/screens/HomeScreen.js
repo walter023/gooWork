@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Text } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import { JobList } from 'components';
@@ -11,7 +12,10 @@ export const HomeScreen = ({ navigation }) => {
   useEffect(() => {
     store.dispatch(getJobs());
   }, []);
-
+  
+  if (loading) {
+    return <Text>Loading....</Text>;
+  }
   return (
     <ListLayout>{jobs && !error && <JobList navigation={navigation} data={jobs} />}</ListLayout>
   );
