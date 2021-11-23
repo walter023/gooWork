@@ -4,13 +4,13 @@ import { Animated, Text, TouchableOpacity, Image, View, ViewPropTypes } from 're
 
 import { Opacity } from 'styles';
 import { Routes } from 'config';
-import { toUpper } from 'helpers';
+import { toUpper, maskMoneyString } from 'helpers';
 
 import { Icon } from '../Icon';
 import { styles } from './styles';
 
 export const JobCard = ({ job, style, navigation }) => {
-  const { title, employmentType, createdAt, profession, location, rate, timeFrame } = job;
+  const { title, employmentType, profession, location, rate, timeFrame } = job;
   const cardScale = new Animated.Value(1);
 
   const navigateTo = route => {
@@ -69,7 +69,9 @@ export const JobCard = ({ job, style, navigation }) => {
               <View style={styles.inline}>
                 <Text style={[styles.smallCopy, styles.smallCopyLight]}>a month ago</Text>
                 <Text style={[styles.smallCopy, styles.smallCopyLight]}> • </Text>
-                <Text style={[styles.smallCopy, styles.smallCopyLight]}>{}</Text>
+                <Text style={[styles.smallCopy, styles.smallCopyLight]}>
+                  {rate.type !== 'QUOTE' ? maskMoneyString(rate.max) : 'Contact to quote'}
+                </Text>
               </View>
             </View>
           </View>
