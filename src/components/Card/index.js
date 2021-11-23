@@ -4,13 +4,13 @@ import { Animated, Text, TouchableOpacity, Image, View, ViewPropTypes } from 're
 
 import { Opacity } from 'styles';
 import { Routes } from 'config';
-import { toUpper } from '../../helpers';
+import { toUpper } from 'helpers';
 
 import { Icon } from '../Icon';
 import { styles } from './styles';
 
 export const JobCard = ({ job, style, navigation }) => {
-  const { title, employmentType, createdAt, profession, location, rate } = job;
+  const { title, employmentType, createdAt, profession, location, rate, timeFrame } = job;
   const cardScale = new Animated.Value(1);
 
   const navigateTo = route => {
@@ -49,7 +49,7 @@ export const JobCard = ({ job, style, navigation }) => {
             },
           ]}
         >
-          <View style={styles.cardHeader}>
+          <View style={styles.inline}>
             <Icon name={profession.name} size="large" containerStyle={styles.icon} />
             <View>
               <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">
@@ -64,12 +64,12 @@ export const JobCard = ({ job, style, navigation }) => {
               </View>
               <View style={styles.inline}>
                 <Icon name="Clock" size="small" />
-                <Text style={styles.small}>small body</Text>
+                <Text style={styles.smallCopy}>{`Starts ${toUpper(timeFrame).toLowerCase()}`}</Text>
               </View>
               <View style={styles.inline}>
-                <Text style={styles.small}>small body</Text>
-                <Text>build point</Text>
-                <Text style={styles.small}>small body</Text>
+                <Text style={[styles.smallCopy, styles.smallCopyLight]}>a month ago</Text>
+                <Text style={[styles.smallCopy, styles.smallCopyLight]}> • </Text>
+                <Text style={[styles.smallCopy, styles.smallCopyLight]}>{}</Text>
               </View>
             </View>
           </View>

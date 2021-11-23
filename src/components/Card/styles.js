@@ -12,11 +12,9 @@ export const styles = StyleSheet.create({
     marginHorizontal: Margin.SMALL,
     alignSelf: 'center',
   },
-  cardHeader: {
-    flexDirection: 'row',
-  },
   inline: {
     flexDirection: 'row',
+    marginVertical: 2,
   },
   boldCopy: {
     fontSize: 16,
@@ -31,9 +29,20 @@ export const styles = StyleSheet.create({
   bodyCopy: {
     fontSize: 16,
     color: Color.GREY,
-    fontWeight: '400'
+    fontWeight: '400',
   },
   bullet: {
     marginBottom: Margin.SMALL,
+  },
+  smallCopy: {
+    fontSize: 14,
+    color: Color.DARKGREY,
+    fontWeight: '500',
+    alignSelf: 'center',
+    paddingLeft: Padding.XSMALL,
+  },
+  smallCopyLight: {
+    color: Color.GREY,
+    paddingLeft: 0,
   },
 });
